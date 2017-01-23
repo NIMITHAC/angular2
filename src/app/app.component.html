@@ -1,3 +1,13 @@
 <h1>
   {{title}}
 </h1>
+
+<div>
+	<input type="text" [(ngModel)]="newTask">
+	<button (click)="addTask()" >Add Task</button>
+</div>
+
+<div *ngFor="let item of todos">
+	<div>{{item.title}}</div>
+	<div><button (click)="deleteTask(item)">Delete</button></div>
+</div>
